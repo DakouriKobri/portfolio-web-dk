@@ -1,4 +1,4 @@
-import Navbar from "./components/navbar/Navbar";
+import Menu from "./components/menu/Menu";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
@@ -9,7 +9,7 @@ import "./app.scss";
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      <Menu />
       <div className="sections">
         <Hero />
         <About />
