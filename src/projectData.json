@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "title": "EKEA shopping list",
+    "thumbnail": "https://www.bruksanvisni.ng/thumbs/brands/l/627-ikea_logo.jpg",
+    "description": "This is an app to help users monitor theirpurchase at IKEA",
+    "technologyPills": ["React.js", "Firebase", "localStorage"],
+    "hostingLink": "https://github.com/DakouriKobri/ekea-shopping-list-app",
+    "gitRepositoryLink": "https://github.com/DakouriKobri/ekea-shopping-list-app",
+    "iscompleted": true
+  },
+  {
+    "id": "2",
+    "title": "Vegan restaurant website",
+    "thumbnail": "https://label-magazine.com/media/thumbnails/046a11b67f650fa6f7a663adf2f1f4b2.png",
+    "iscompleted": true
+  },
+  {
+    "id": "3",
+    "title": "Package tracker",
+    "thumbnail": "https://play-lh.googleusercontent.com/FpCpDnpJMtnH2ExsYRDbMdxie81_KQ1pXG7pcNcAK9qatTOEWQOa24KrHSqGdsK_aNo=h500",
+    "iscompleted": false
+  },
+  {
+    "id": "4",
+    "title": "Todo list TTD",
+    "thumbnail": "https://1.bp.blogspot.com/-i78iKr_P9Pk/X9ohjXyc5eI/AAAAAAAAA_4/8UauxZaOgUshGK7MXwW1gZqts7Zrf_AewCLcBGAsYHQ/s1280/Todo%2BList%2BApp%2Busing%2BHTML%2BCSS%2B%2526%2BJavaScript.webp",
+    "iscompleted": false
+  },
+  {
+    "id": "5",
+    "title": "E-commerce site",
+    "thumbnail": "https://www.freshegg.co.uk/m/0/responsive-design-ecommerce-site-graphic.png",
+    "iscompleted": false
+  },
+  {
+    "id": "6",
+    "title": "BBQ restaruant website",
+    "thumbnail": "https://media.timeout.com/images/102523828/image.jpg",
+    "iscompleted": false
+  },
+  {
+    "id": "7",
+    "title": "Learning Platform",
+    "thumbnail": "https://s.udemycdn.com/meta/default-meta-image-v2.png",
+    "iscompleted": false
+  },
+  {
+    "id": "8",
+    "title": "Netflix clone",
+    "thumbnail": "https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5..1582751026.png",
+    "iscompleted": false
+  }
+]
