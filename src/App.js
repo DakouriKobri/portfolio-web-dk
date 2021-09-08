@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Menu from "./components/menu/Menu";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
@@ -7,13 +8,15 @@ import Contact from "./components/contact/Contact";
 import "./app.scss";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="app">
       <Menu />
       <div className="sections">
         <Hero />
         <About />
-        <Projects />
+        <Projects isOpen={isOpen} openModal={setIsOpen} />
         <Technologies />
         <Contact />
       </div>

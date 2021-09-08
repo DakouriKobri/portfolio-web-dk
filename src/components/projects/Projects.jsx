@@ -1,12 +1,20 @@
 import { useState } from "react";
+import Modal from "../modal/Modal";
+import ProjectData from "../../projectData.json";
 import "./projects.scss";
-import projectData from "../../projectData.json";
 
-export default function Projects() {
-  const [isCompleted, setIsCompleted] = useState(false);
+export default function Projects({ isOpen, openModal }) {
+  const [data] = useState(ProjectData);
+  const [id, setId] = useState(0);
 
-  // sample element
-  <div className={isCompleted ? null : "classname"}></div>;
+  function modalHandler(id) {
+    //set Id so modal understands which element to target
+    setId(id);
+
+    //Open modal on clicked
+    openModal(true);
+  }
+
   return (
     <div className="projects" id="projects">
       <h2>Projects</h2>
@@ -15,11 +23,17 @@ export default function Projects() {
         Novare Potential.
       </p>
       <div className="container">
-        {projectData.map((project) => (
-          <div className="card" key={project.id}>
-            <div className={project.isCompleted ? null : "card-overlay"}>
+        {data.map((project) => (
+          <div className="card">
+            <div
+              className={
+                project.isCompleted ? "card-overlay" : "card-overlay active"
+              }
+            >
               <img
                 className="card-thumbnail"
+                key={project.id}
+                onClick={() => modalHandler(project.id)}
                 src={project.thumbnail}
                 alt={project.title}
               />
@@ -28,11 +42,34 @@ export default function Projects() {
             <h3 className="card-title">{project.title}</h3>
           </div>
         ))}
+        {data[id]["isCompleted"] && (
+          <Modal isOpen={isOpen}>
+            <div className="close-btn">
+              <button onClick={() => openModal(!isOpen)}>X</button>
+            </div>
+            <div className="modal-card">
+              <div className="modal-thumbnail">
+                <img src={data[id]["thumbnail"]} alt="" />
+              </div>
+              <h3>{data[id]["title"]}</h3>
+              <p>{data[id]["description"]}</p>
+              <div className="skills" key={data[id]}>
+                {data[id]["technologyPills"].map((skills) => (
+                  <span>{skills}</span>
+                ))}
+              </div>
+              <div className="btns">
+                <a href={data[id]["hostingLink"]}>
+                  <button className="btn-to-web">Visit website/app</button>
+                </a>
+                <a href={data[id]["gitRepositoryLink"]}>
+                  <button className="btn-to-repo"> Git repository</button>
+                </a>
+              </div>
+            </div>
+          </Modal>
+        )}
       </div>
     </div>
   );
 }
-// {project.isCompleted ?} "card card-overlay card-thumbnail project-status card-title": "card card-overlay:hover card-thumbnail project-status card-title"}
-// "card card-overlay card-thumbnail project-status card-title":
-// "card card-overlay:hover card-thumbnail project-status card-title"}
-// {project.isCompleted ? "card-overlay disable" : "card-overlay"}
