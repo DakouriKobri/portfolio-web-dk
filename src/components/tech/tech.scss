@@ -1,0 +1,63 @@
+@import "../../global.scss";
+
+.tech {
+  background-color: $lightGray;
+  display: grid;
+  grid: auto-flow min-content / 1fr;
+  grid-template-areas:
+    "h2             "
+    "content-wrapper";
+
+  grid-gap: 1em;
+
+  justify-content: center;
+
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .content-wrapper {
+    width: 90%;
+    display: grid;
+    grid: auto-flow min-content / 1fr;
+    grid-template-areas:
+      "p        "
+      "container";
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding-bottom: 15px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat (4, 1fr);
+      grid-template-areas: "tech-card tech-card tech-card tech-card";
+      gap: 5px;
+      align-items: center;
+      justify-content: space-between;
+
+      .tech-card {
+        text-align: center;
+        width: 65px;
+        transition: transform 0.3s;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          font-size: x-small;
+        }
+      }
+    }
+  }
+}

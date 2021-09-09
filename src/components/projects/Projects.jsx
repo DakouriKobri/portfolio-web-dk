@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "../modal/Modal";
-import ProjectData from "../../projectData.json";
+import ProjectData from "../data/projectData.json";
 import "./projects.scss";
 
 export default function Projects({ isOpen, openModal }) {
@@ -53,9 +53,11 @@ export default function Projects({ isOpen, openModal }) {
               </div>
               <h3>{data[id]["title"]}</h3>
               <p>{data[id]["description"]}</p>
-              <div className="skills" key={data[id]}>
+              <div className="skills">
                 {data[id]["technologyPills"].map((skills) => (
-                  <span>{skills}</span>
+                  <span key={data[id]["technologyPills"].indexOf(skills)}>
+                    {skills}
+                  </span>
                 ))}
               </div>
               <div className="btns">

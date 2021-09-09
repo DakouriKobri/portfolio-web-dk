@@ -17,7 +17,7 @@ export default function Menu() {
             </a>
           </li>
           <li>
-            <a href="#technologies">Tech</a>
+            <a href="#tech">Tech</a>
           </li>
           <li>
             <a href="#contact">Contact</a>

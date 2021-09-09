@@ -3,7 +3,7 @@ import Menu from "./components/menu/Menu";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
-import Technologies from "./components/technologies/Technologies";
+import Tech from "./components/tech/Tech";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 
@@ -17,7 +17,7 @@ function App() {
         <Hero />
         <About />
         <Projects isOpen={isOpen} openModal={setIsOpen} />
-        <Technologies />
+        <Tech />
         <Contact />
       </div>
     </div>
