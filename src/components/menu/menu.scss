@@ -30,6 +30,12 @@
           font-size: 11px;
           line-height: 13px;
           font-weight: 400;
+          span {
+            img {
+              width: 28px;
+              height: 28px;
+            }
+          }
         }
       }
     }

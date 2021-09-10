@@ -1,4 +1,5 @@
 import "./menu.scss";
+import logo from "../../assets/logo192.png";
 
 export default function Menu() {
   return (
@@ -13,7 +14,9 @@ export default function Menu() {
           </li>
           <li>
             <a href="#hero" className="logo">
-              <span>LOGO</span>
+              <span>
+                <img src={logo} alt="logo of Dakouri" />
+              </span>
             </a>
           </li>
           <li>
