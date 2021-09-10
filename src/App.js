@@ -5,6 +5,8 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Tech from "./components/tech/Tech";
 import Contact from "./components/contact/Contact";
+import "./icons/fontawesome";
+
 import "./app.scss";
 
 function App() {

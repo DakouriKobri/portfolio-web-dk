@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkGray;
+  padding-top: 18px;
+  padding-bottom: 28px;
+
+  .list-social-media {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+
+    .fab {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+  .copyright {
+    padding-top: 8px;
+    p {
+      font-size: x-small;
+      color: #fff;
+    }
+  }
+}
