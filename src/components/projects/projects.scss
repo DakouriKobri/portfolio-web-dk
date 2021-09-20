@@ -2,75 +2,99 @@
 
 .projects {
   background-color: $lightGray;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid: auto-flow min-content / 1fr;
+  grid-template-areas:
+    "h2             "
+    "content-wrapper";
+
+  grid-gap: 1em;
+
+  justify-content: center;
 
   h2 {
     margin-top: 40px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
-  p {
-    margin: 20px;
-    padding-bottom: 15px;
-  }
+  .content-wrapper {
+    background-color: red;
+    width: 90%;
+    display: grid;
+    grid: auto-flow min-content / 1fr;
+    grid-template-areas:
+      "p        "
+      "container";
+    margin-left: auto;
+    margin-right: auto;
 
-  .container {
-    width: 67%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding-bottom: 15px;
+    }
 
-    .card {
-      width: 220px;
-      height: 250px;
-      margin: 10px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .container {
+      display: grid;
+      grid: auto-flow min-content / 1fr 1fr;
+      grid-template-areas: "card card";
+      grid-auto-rows: auto;
+      gap: 5px;
 
-      .card-overlay {
-        width: 220px;
-        height: 200px;
-        border-radius: 10px;
+      .card {
+        width: 140px;
+        height: 125px;
+        margin: 10px 20px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        position: relative;
-        transition: all 0.5s ease;
-        cursor: pointer;
 
-        .card-thumbnail {
-          width: 100%;
-          height: 100%;
+        .card-overlay {
+          width: 220px;
+          height: 200px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          flex-direction: column;
+          /* align-items: center;
+          justify-content: center */
+          position: relative;
+          transition: all 0.5s ease;
           cursor: pointer;
 
-          object-fit: cover;
-          z-index: 1;
-        }
+          .card-thumbnail {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
 
-        .project-status {
-          position: absolute;
-          font-size: 20px;
-          color: white;
-        }
+            object-fit: cover;
+            z-index: 1;
+          }
 
-        .card-title {
-          margin-top: 2px;
-          margin-bottom: 8px;
-        }
+          .project-status {
+            position: absolute;
+            font-size: 20px;
+            color: white;
+          }
 
-        &.active {
-          &:hover {
-            background-color: black;
-            .card-thumbnail {
-              opacity: 0.2;
-              z-index: 0;
-              &.no-click {
-                pointer-events: none;
+          .card-title {
+            margin-top: 2px;
+            margin-bottom: 8px;
+          }
+
+          &.active {
+            &:hover {
+              background-color: black;
+              .card-thumbnail {
+                opacity: 0.2;
+                z-index: 0;
+                &.no-click {
+                  pointer-events: none;
+                }
               }
             }
           }
