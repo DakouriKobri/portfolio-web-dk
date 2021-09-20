@@ -1,9 +1,7 @@
 @import "../../global.scss";
 
-.contact {
+.tech {
   background-color: $lightGray;
-
-  //background-color: $lightGray;
   display: grid;
   grid: auto-flow min-content / 1fr;
   grid-template-areas:
@@ -11,18 +9,18 @@
     "content-wrapper";
 
   grid-gap: 1em;
+
   justify-content: center;
-  overflow: hidden;
 
   h2 {
     margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
   }
 
-  .contact-detail {
+  .content-wrapper {
     width: 90%;
     display: grid;
     grid: auto-flow min-content / 1fr;
@@ -38,18 +36,28 @@
       margin-left: 0;
       padding-bottom: 15px;
     }
-    .contact-list {
-      padding-left: 0;
-      .contact-item {
-        margin-bottom: 5px;
-        span {
-          margin-left: 8px;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "tech-card tech-card tech-card tech-card";
+      gap: 5px;
+      align-items: center;
+      justify-content: space-between;
+
+      .tech-card {
+        text-align: center;
+        width: 65px;
+        transition: transform 0.3s;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          font-size: x-small;
         }
       }
     }
-  }
-
-  .void-space-before-footer {
-    height: 280px;
   }
 }

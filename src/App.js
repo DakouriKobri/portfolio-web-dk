@@ -1,20 +1,25 @@
-import Navbar from "./components/navbar/Navbar";
+import { useState } from "react";
+import Menu from "./components/menu/Menu";
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
-import Technologies from "./components/technologies/Technologies";
+import Tech from "./components/tech/Tech";
 import Contact from "./components/contact/Contact";
+import "./icons/fontawesome";
+
 import "./app.scss";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="app">
-      <Navbar />
+      <Menu />
       <div className="sections">
         <Hero />
         <About />
-        <Projects />
-        <Technologies />
+        <Projects isOpen={isOpen} openModal={setIsOpen} />
+        <Tech />
         <Contact />
       </div>
     </div>
