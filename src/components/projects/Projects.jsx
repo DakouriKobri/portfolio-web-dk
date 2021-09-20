@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "../modal/Modal";
-import ProjectData from "../data/projectData.json";
+import ProjectData from "../../data/projectData.json";
 import "./projects.scss";
 
 export default function Projects({ isOpen, openModal }) {

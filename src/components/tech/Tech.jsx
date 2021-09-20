@@ -1,4 +1,4 @@
-import { techData } from "../data/techData";
+import { techData } from "../../data/techData";
 import "./tech.scss";
 
 const myTechData = techData();
